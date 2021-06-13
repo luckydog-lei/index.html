@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<style>
+       * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .top-outer {
+        height: 50px;
+        background-color: black;
+    }
+    
+    .top {
+        height: 50px;
+        width: 1200px;
+        margin: 0 auto;
+        line-height: 50px;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        line-height: 50px;
+    }
+    
+    .img1 {
+        margin-left: 50px;
+    }
+    
+    .topa {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .top1 {
+        color: orange;
+    }
+    
+    .topb {
+        color: rgb(185, 176, 176);
+        font-size: 13px;
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .topc {
+        font-size: 13px;
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .top12 {
+        font-size: 15px;
+    }
+    
+    .top11 {
+        background: url(./images/search.png);
+        margin-top: 13px;
+        height: 25px;
+        width: 180px;
+        color: grey;
+    }
+    
+    .top13 {
+        margin-top: -11px;
+    }
+    
+    .top_show {
+        position: relative;
+    }
+    
+    .top_show>span {
+        position: absolute;
+        top: 18px;
+        left: -20px;
+        width: 20px;
+        height: 20px;
+        background-image: url(./images/sprites.png);
+        background-position: -230px -26px;
+    }
+    
+    .lyric-cd {
+        width: 1200px;
+        height: 700px;
+        margin: 0 auto;
+    }
+    
+    .lyric {
+        height: 700px;
+        width: 800px;
+        float: left;
+        overflow: hidden;
+    }
+    
+    .lyric1 {
+        height: 150px;
+        border-bottom: 1px solid rgb(235, 227, 227);
+    }
+    
+    .lyric2 {
+        width: 60%;
+        height: 700px;
+        margin: 0 auto;
+        line-height: 90px;
+    }
+    
+    h2 {
+        margin-left: 220px;
+    }
+    
+    .p1 {
+        float: left;
+        font-size: 15px;
+        margin-top: -50px;
+        margin-left: 130px;
+    }
+    
+    .p2 {
+        font-size: 15px;
+        float: left;
+        color: rgb(151, 149, 145);
+        margin-top: -50px;
+        margin-left: 60px;
+    }
+    
+    .p3 {
+        color: rgb(230, 170, 5);
+        font-size: 15px;
+        float: left;
+        margin-top: -50px;
+        margin-left: 10px;
+    }
+    
+    .p4 {
+        color: rgb(230, 170, 5);
+        font-size: 15px;
+        float: left;
+        margin-top: -50px;
+        margin-left: 10px;
+    }
+    
+    .lyric3 {
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .p5 {
+        font-size: 20px;
+        color: rgb(230, 170, 5);
+    }
+    
+    @keyframes animation1 {
+        0% {
+            margin: 100px auto;
+            transform: rotate(0deg);
+            background-color: white;
+        }
+        100% {
+            margin: 100px auto;
+            transform: rotate(360deg);
+            background-color: white;
+        }
+    }
+    
+    .cd {
+        position: relative;
+        height: 700px;
+        width: 400px;
+        background-color: white;
+        border-radius: 90%;
+        float: left;
+        overflow: hidden;
+    }
+    
+    .cd img {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        animation-name: animation1;
+        animation-timing-function: linear;
+        animation-duration: 10s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        border-radius: 50%;
+    }
+    
+    .cd1 {
+        position: absolute;
+        top: 170px;
+        left: 180px;
+        height: 50px;
+        width: 50px;
+        overflow: hidden;
+        border-radius: 90%;
+        background-color: white;
+        opacity: 0.5;
+        border: 1px solid rgb(133, 130, 130);
+    }
+    
+    .cd2 {
+        position: absolute;
+        top: 185px;
+        left: 195px;
+        height: 20px;
+        width: 20px;
+        overflow: hidden;
+        border-radius: 90%;
+        background-color: rgb(253, 251, 251);
+        opacity: 0.9;
+        border: 1px solid rgb(196, 189, 189);
+    }
+    
+    .prograssbar {
+        position: absolute;
+        width: 360px;
+        height: 40px;
+        top: 340px;
+        left: 10px;
+        line-height: 40px;
+    }
+    
+    .prograssbar>div {
+        float: left;
+    }
+    
+    .stop {
+        width: 40px;
+        height: 40px;
+        background-image: url(./images/stop.jpg);
+        background-size: 40px 40px;
+    }
+    
+    .prograss {
+        position: relative;
+        width: 220px;
+        height: 8px;
+        margin: 16px;
+        border-radius: 5px;
+        background-color: #ccc;
+    }
+    
+    .dot {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: -4px;
+        left: 0;
+        border-radius: 50%;
+        background-color: orange;
+    }
+    
+    .sound {
+        width: 22px;
+        height: 18px;
+        margin-top: 10px;
+        margin-left: 2px;
+        background-image: url(./images/sound.jpg);
+        background-size: 22px 18px;
+    }
+    
+    .download {
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: rgba(0, 0, 139, .6);
+        border-radius: 25px;
+        bottom: 200px;
+        left: 100px;
+    }
+    
+    .download span {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-image: url(./images/sprites_1.jpg);
+        background-position: 0 0;
+    }
+    
+    .user-listen {
+        position: absolute;
+        top: 520px;
+        left: 55px;
+        width: 260px;
+        height: 80px;
+    }
+    
+    .user-listen-logo {
+        float: left;
+        width: 60px;
+        height: 60px;
+        background-image: url(./images/mylogo.jpg);
+        background-size: 50px;
+        border-radius: 50%;
+    }
+    
+    .user-listen-right {
+        position: relative;
+        float: left;
+        width: 180px;
+        height: 60px;
+        background-color: #ccc;
+        border-radius: 8px;
+        margin-left: 20px;
+    }
+    
+    .user-listen-right p {
+        font-size: 14px;
+        line-height: 30px;
+        text-indent: 12px;
+    }
+    
+    .user-listen-right>p:last-child {
+        color: darkblue;
+    }
+    
+    .user-listen-right>p:last-child>span {
+        font-size: 5px;
+        float: right;
+        margin-right: 5px;
+    }
+    
+    .user-listen-right>span {
+        position: absolute;
+        top: 15px;
+        left: -8px;
+        width: 20px;
+        height: 20px;
+        background-color: #ccc;
+        transform: rotate(45deg);
+    }
+    
+    .outer-comment {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .logo-comment {
+        width: 800px;
+        height: 220px;
+    }
+    
+    .mycomment {
+        position: relative;
+        width: 900px;
+    }
+    
+    .mycomment h4 {
+        font-size: 18px;
+        line-height: 40px;
+        text-indent: 20px;
+        font-weight: normal;
+        border-bottom: 2px solid #ccc;
+    }
+    
+    .mycomment>h4>span {
+        font-size: 14px;
+    }
+    
+    .mycommentlogo {
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        width: 70px;
+        height: 70px;
+        background-image: url(./images/mylogo.jpg);
+        background-size: 70px;
+    }
+    
+    #textarea {
+        position: absolute;
+        top: 60px;
+        font-size: 18px;
+        line-height: 2em;
+        left: 100px;
+        outline: none;
+        border: 1px solid #ccc;
+        resize: none;
+        width: 800px;
+        height: 140px;
+    }
+    
+    .logo-comment>h5 {
+        position: absolute;
+        top: 210px;
+        left: 100px;
+        font-weight: normal;
+        font-size: 20px;
+    }
+    
+    .wordscount {
+        position: absolute;
+        top: 215px;
+        right: 100px;
+    }
+    
+    .submit {
+        position: absolute;
+        top: 210px;
+        right: 0;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        color: white;
+        text-align: center;
+        outline: none;
+        background-color: orange;
+        border: 0;
+    }
+    
+    .comments>h4 {
+        line-height: 50px;
+        width: 900px;
+        font-weight: normal;
+        font-size: 20px;
+        text-indent: 10px;
+        border-bottom: 2px solid #ccc;
+    }
+    
+    #user-comment li {
+        position: relative;
+        list-style: none;
+        padding: 20px 0;
+        width: 900px;
+        height: 100px;
+        border-bottom: 2px solid dotted;
+    }
+    
+    #user-comment li>div {
+        float: left;
+    }
+    
+    .logo {
+        width: 80px;
+        height: 80px;
+        background-image: url(./images/commentlogo.jpg);
+        background-size: 80px;
+    }
+    
+    .comment-block {
+        position: relative;
+        margin-left: 20px;
+        width: 800px;
+    }
+    
+    .comment-block h5 {
+        display: inline;
+        font-size: 18px;
+        font-weight: normal;
+        color: orange;
+    }
+    
+    .comment-block span {
+        float: right;
+        color: black;
+        font-size: 15px;
+    }
+    
+    .comment-block h4 {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    
+    .comment-block p {
+        font-size: 10px;
+    }
+    
+    .comment-block h6 {
+        font-weight: normal;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .comment-block i {
+        width: 15px;
+        height: 15px;
+        background-image: url(./images/zan.jpg);
+        background-size: 15px 15px;
+        position: absolute;
+        bottom: 0;
+        right: 35px;
+    }
+    
+    .comment-block em {
+        font-style: normal;
+        position: absolute;
+        bottom: 0;
+        right: 55px;
+    }
+    
+    .page {
+        margin-top: 30px;
+        margin-left: 260px;
+    }
+    
+    .page li {
+        list-style: none;
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        background-color: #ccc;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    
+    .page li:nth-child(2) {
+        background-color: orange;
+    }
+    
+    .page li:nth-child(4) {
+        background-color: transparent;
+    }
+</style>
+
+<body>
+
+    <div class="top-outer">
+        <div class="top">
+
+            <div class="topa">
+                <img class="img1" src="./images/logo.jpg">
+                <div class="top1">首页</div>
+                <div class="top2">榜单</div>
+                <div class="top3">歌手</div>
+                <div class="top4">下载酷我客户端</div>
+            </div>
+            <div class="topb">
+                <div class="top_show">
+                    <span></span>美女秀
+                </div>
+                <div class="top_show">
+                    <span></span>酷我耳机
+                </div>
+                <div class="top_show">
+                    <span></span>VIP会员
+                </div>
+                <div class="top_show">
+                    <span></span>i听
+                </div>
+            </div>
+            <div class="topc">
+                <div class="top9">更多服务</div>
+                <div class="top10">登录</div>
+                <div class="top12">^</div>
+                <div class="top11">
+                    <div class="top13">找到好音乐</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lyric-cd">
+        <div class="lyric">
+            <div class="lyric1">
+                <div class="lyric2">
+                    <h2>喜羊羊</h2>
+                    <p class="p2">专辑：</p>
+                    <p class="p3">儿歌大全</p>
+                    <p class="p2">歌手：</p>
+                    <p class="p3">华语群星</p>
+                    <p class="p2">分享</p><span class="span1"></span>
+                    <p class="p4">评论</p>
+                    <p class="p1">上传时间：2015-10-02 歌曲来源：网络</p>
+                    </br>
+                    <div class="lyric3">
+                        <p class="p5">喜羊羊 美羊羊 懒羊羊 沸羊羊</p>
+                        <p>慢羊羊 软绵绵 红太狼 灰太狼</p>
+                        <p>别看我只是一只羊 </p>
+                        <p>绿草因为我变得更香</p>
+                        <p>天空因为我变得更蓝</p>
+                        <p>白云因为我变得柔软</p>
+                        <p>别看我只是一只羊</p>
+                        <p>羊儿的聪明难以想象</p>
+                        <p>天再高心情一样奔放</p>
+                        <p>每天都追赶太阳</p>
+                        <p>有什么难题 去牵绊我 都不会去心伤</p>
+                        <p>有什么危险 在我面前 也不会去慌乱</p>
+                        <p>就算有狼群 把我追捕 也当做游戏一场</p>
+                        <p>在什么时间 都爱开心 笑容都会飞翔</p>
+                        <p>就算会摔倒 站了起来 永远不会沮丧</p>
+                        <p>在所有天气 拥有叫人 大笑的力量 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cd">
+            <audio>
+                <source src="./喜羊羊.mp3" type="audio/mpeg">
+            </audio>
+            <img src="./images/song.jpg">
+            <div class="cd1"></div>
+            <div class="cd2"></div>
+            <div class="prograssbar">
+                <div class="stop"></div>
+                <div class="prograss">
+                    <div class="dot"></div>
+                </div>
+                <div class="musictime">00:00</div>
+                <div class="sound"></div>
+            </div>
+            <div class="download">
+                <span></span>免费下载这首歌
+            </div>
+            <div class="user-listen">
+                <div class="user-listen-logo"></div>
+                <div class="user-listen-right"><span></span>
+                    <p>雨雷————H5班</p>
+                    <p>喜羊羊与灰太狼<span>去现场</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer-comment">
+        <div class="mycomment">
+            <h4>评论 &nbsp;&nbsp;<span>1703条评论</span></h4>
+            <div class="logo-comment">
+                <div class="mycommentlogo"></div>
+                <textarea name="" id="textarea" placeholder="  分享你的音乐见解"></textarea>
+                <h5>☺</h5>
+                <p class="wordscount">已输入 0个字</p>
+                <button class="submit">评论</button>
+            </div>
+        </div>
+        <div class="comments">
+            <h4>精彩评论</h4>
+            <ul id="user-comment">
+                <li>
+                    <div class="logo"></div>
+                    <div class="comment-block">
+                        <h5 class="username">雨雷</h5><span>分享</span>
+                        <h4 class="comment">评论区</h4>
+                        <p class="commentTime">时间啊</p>
+                        <h6>回复</h6>
+                        <i></i>
+                        <em class="zan">168</em>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo"></div>
+                    <div class="comment-block">
+                        <h5 class="username">雨雷</h5><span>分享</span>
+                        <h4 class="comment">评论区</h4>
+                        <p class="commentTime">时间啊</p>
+                        <h6>回复</h6>
+                        <i></i>
+                        <em class="zan">168</em>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo"></div>
+                    <div class="comment-block">
+                        <h5 class="username">雨雷</h5><span>分享</span>
+                        <h4 class="comment">评论区</h4>
+                        <p class="commentTime">时间啊</p>
+                        <h6>回复</h6>
+                        <i></i>
+                        <em class="zan">168</em>
+                    </div>
+                </li>
+            </ul>
+            <ul class="page">
+                <li>＜</li>
+                <li>1</li>
+                <li>2</li>
+                <li>···</li>
+                <li>23</li>
+                <li>＞</li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var audio = document.getElementsByTagName("audio")[0];
+    var stop = document.getElementsByClassName("stop")[0];
+    var dot = document.getElementsByClassName("dot")[0];
+    var musictime = document.getElementsByClassName("musictime")[0];
+    var sound = document.getElementsByClassName("sound")[0];
+    var submit = document.getElementsByClassName("submit")[0];
+    var textarea = document.getElementById("textarea");
+
+    stop.onclick = function() {
+        if (audio.paused) {
+            audio.play();
+            stop.style.backgroundImage = "url(./images/play.jpg)";
+            timer = setInterval(function() {
+                var currentTime = audio.currentTime;
+                var min = parseInt(currentTime / 60);
+                min = min < 10 ? "0" + min : min;
+                var sec = parseInt(currentTime % 60);
+                sec = sec < 10 ? "0" + sec : sec;
+                musictime.innerHTML = min + ":" + sec;
+                currentTime = audio.currentTime / audio.duration;
+                dot.style.left = currentTime * 220 + "px";
+            }, 1000)
+        } else {
+            audio.pause();
+            clearInterval(timer);
+            stop.style.backgroundImage = "url(./images/stop.jpg)";
+        }
+    }
+
+    sound.onclick = function() {
+        if (audio.muted) {
+            audio.muted = false;
+        } else {
+            audio.muted = true;
+        }
+    }
+
+    var commentsData = [{
+        username: "雨雷",
+        commentwords: "Too",
+        count: 168,
+        time: "2017-06-10 07:00:42"
+    }, {
+        username: "Forget",
+        commentwords: "我喜欢很多歌曲，喜欢过很多唱歌的人，那些有时不是我的爱好，已经成为我那段青春的回忆，我现在可以很骄傲",
+        count: 149,
+        time: "2017-06-03 16:58:02"
+    }, {
+        username: "亚里士多德",
+        commentwords: "学校晚会表演这歌",
+        count: 106,
+        time: "2017-05-14 14:12:53"
+    }];
+
+    window.onload = function() {
+        if (localStorage.getItem("json") === null) {
+            var json = JSON.stringify(commentsData);
+            localStorage.setItem("json", json);
+        }
+        var json = localStorage.getItem("json");
+        json = JSON.parse(json);
+        for (var i = 0; i < 3; i++) {
+            var logo = document.getElementsByClassName("logo")[i];
+            var commentBlock = document.getElementsByClassName("comment-block")[i];
+            var username = commentBlock.getElementsByClassName("username")[0];
+            var comment = commentBlock.getElementsByClassName("comment")[0];
+            var commentTime = commentBlock.getElementsByClassName("commentTime")[0];
+            var zan = commentBlock.getElementsByClassName("zan")[0];
+            username.innerHTML = json[i].username;
+            comment.innerHTML = json[i].commentwords;
+            commentTime.innerHTML = json[i].time;
+            zan.innerHTML = json[i].count;
+            if (json[i].username == "雨雷") {
+                logo.style.backgroundImage = "url(./images/mylogo.jpg)";
+            }
+        }
+    }
+
+    submit.onclick = function() {
+        if (textarea.value == "") {
+            alert("评论不能为空");
+        } else {
+            var date = new Date();
+            var year = date.getFullYear();
+            var mon = date.getMonth() + 1;
+            mon = mon < 10 ? "0" + mon : mon;
+            var d = date.getDate();
+            d = d < 10 ? "0" + d : d;
+            var h = date.getHours();
+            h = h < 10 ? "0" + h : h;
+            var min = date.getMinutes();
+            min = min < 10 ? "0" + min : min;
+            var sec = date.getSeconds();
+            sec = sec < 10 ? "0" + sec : sec;
+            var myCommentTime = year + "-" + mon + "-" + d + " " + h + ":" + min + ":" + sec;
+            var myMessage = {
+                username: "雨雷",
+                commentwords: textarea.value,
+                count: Math.ceil(Math.random() * 500),
+                time: myCommentTime
+            };
+            textarea.value = "";
+            var json = localStorage.getItem("json");
+            json = JSON.parse(json);
+            json.unshift(myMessage);
+            for (var i = 0; i < 3; i++) {
+                var logo = document.getElementsByClassName("logo")[i];
+                var commentBlock = document.getElementsByClassName("comment-block")[i];
+                var username = commentBlock.getElementsByClassName("username")[0];
+                var comment = commentBlock.getElementsByClassName("comment")[0];
+                var commentTime = commentBlock.getElementsByClassName("commentTime")[0];
+                var zan = commentBlock.getElementsByClassName("zan")[0];
+                username.innerHTML = json[i].username;
+                comment.innerHTML = json[i].commentwords;
+                commentTime.innerHTML = json[i].time;
+                zan.innerHTML = json[i].count;
+                if (json[i].username == "雨雷") {
+                    logo.style.backgroundImage = "url(./images/mylogo.jpg)";
+                }
+            }
+            json = JSON.stringify(json)
+            localStorage.setItem("json", json);
+        }
+    }
+</script>
+
+</html>
